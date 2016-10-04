@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './HomePage.css';
+import {pokedex} from '../data/pokedex';
 
 class HomePage extends Component{
 	render() {
@@ -18,6 +19,13 @@ class HomePage extends Component{
 						</div>
 					</div>
 					<div id="poke-list" className="poke-list-row">
+						<ul>
+							{pokedex.map(item =>
+								<li key={item.pid}>
+									{item.name}
+								</li>
+							)}
+						</ul>
 					</div>
 				</section>
 			</div>
