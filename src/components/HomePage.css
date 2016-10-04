@@ -1,0 +1,33 @@
+.section {
+    background-color: white;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.title {
+    color: #919191;
+    font-size: 24px;
+}
+
+.search-bar {
+    background-color: #313131;
+    height: 80px;
+}
+
+.poke-results {
+    background-color: #FFF;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 700px;
+}
+
+.button-row {
+    padding-top: 20px;
+}
+
+.poke-list-row {
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
