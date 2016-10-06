@@ -3,16 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tag above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <!-- For old IEs -->
+    <link rel="shortcut icon" href="./images/favicon.ico" />
 
-      Unlike "/favicon.ico" or "favico.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <!-- For new browsers multisize ico  -->
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="./images/favicon.ico">
+
+    <!-- Chrome for Android -->
+    <link rel="icon" sizes="192x192" href="./images/favicon-192.png">
+
+    <!-- For iPhone 6+ downscaled for other devices -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./images/favicon-180.png">
     <title>React App</title>
   </head>
   <body>
@@ -27,5 +32,8 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

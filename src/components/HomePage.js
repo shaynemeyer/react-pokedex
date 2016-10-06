@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './HomePage.css';
-import {pokedex} from '../data/pokedex';
+import SearchPokemon from './forms/SearchPokemon';
 
 class HomePage extends Component{
 	render() {
@@ -10,6 +10,7 @@ class HomePage extends Component{
 					<div className="title">Pokédex</div>
 				</section>
 				<section id="searchBar" className="search-bar">
+					<SearchPokemon/>
 				</section>
 				<section id="pokeResults" className="poke-results">
 					<div className="row button-row">
@@ -19,13 +20,13 @@ class HomePage extends Component{
 						</div>
 					</div>
 					<div id="poke-list" className="poke-list-row">
-						<ul>
-							{pokedex.map(item =>
-								<li key={item.pid}>
-									{item.name}
-								</li>
-							)}
-						</ul>
+						{/*<ul>*/}
+							{/*{pokedex.map(item =>*/}
+								{/*<li key={item.pid}>*/}
+									{/*{item.name}*/}
+								{/*</li>*/}
+							{/*)}*/}
+						{/*</ul>*/}
 					</div>
 				</section>
 			</div>
