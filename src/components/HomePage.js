@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './HomePage.css';
 import SearchPokemon from './forms/SearchPokemon';
+import SortRandom from './forms/SortRandom';
+import SortByFilter from './forms/SortByFilter';
 
 class HomePage extends Component{
 	render() {
@@ -15,8 +17,10 @@ class HomePage extends Component{
 				<section id="pokeResults" className="poke-results">
 					<div className="row button-row">
 						<div className="col-sm-5 col-sm-offset-1">
+							<SortRandom />
 						</div>
 						<div className="col-sm-5 col-sm-offset-1">
+							<SortByFilter />
 						</div>
 					</div>
 					<div id="poke-list" className="poke-list-row">
