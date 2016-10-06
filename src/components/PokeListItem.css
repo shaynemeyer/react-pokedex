@@ -1,0 +1,39 @@
+.panel-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+figure {
+    background: #F2F2F2;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    padding: 10px;
+}
+
+.notch {
+    border-bottom: 2px solid #fff;
+}
+
+.pokemon-info {
+    clear: both;
+    padding-left: 7.2525%;
+    margin-top: -50px;
+}
+
+.pokemon-id {
+    font-family: arial,sans-serif;
+    color: #919191;
+    font-size: 1.2em;
+}
+
+.name {
+    font-family: arial,sans-serif;
+    color: #313131;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}

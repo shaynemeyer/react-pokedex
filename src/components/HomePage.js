@@ -3,6 +3,7 @@ import './HomePage.css';
 import SearchPokemon from './forms/SearchPokemon';
 import SortRandom from './forms/SortRandom';
 import SortByFilter from './forms/SortByFilter';
+import PokeList from './PokeList';
 
 class HomePage extends Component{
 	render() {
@@ -24,13 +25,7 @@ class HomePage extends Component{
 						</div>
 					</div>
 					<div id="poke-list" className="poke-list-row">
-						{/*<ul>*/}
-							{/*{pokedex.map(item =>*/}
-								{/*<li key={item.pid}>*/}
-									{/*{item.name}*/}
-								{/*</li>*/}
-							{/*)}*/}
-						{/*</ul>*/}
+						<PokeList />
 					</div>
 				</section>
 			</div>
