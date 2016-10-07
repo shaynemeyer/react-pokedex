@@ -1,0 +1,52 @@
+.poke-number {
+    color: #616161;
+    margin-left: 0.125em;
+}
+
+.poke-detail-wrapper {
+    margin-top: 20px;
+}
+
+.wrapper {
+    background: #FFF;
+    margin-left: 50px;
+    margin-right: 50px;
+    min-height: 900px;
+    margin-top: -16px;
+}
+
+.previous {
+    border-right: 4px solid #fff;
+    margin: 0;
+}
+
+.pagination-poke-id {
+    font-family: Flexo-Bold,arial,sans-serif;
+    color: #fff;
+    font-size: 150%;
+    line-height: 162.5%;
+    text-transform: none;
+}
+
+.pagination-poke-name {
+    color: #616161;
+    margin: 0 0.5em;
+    font-size: 150%;
+    line-height: 162.5%;
+    text-transform: none;
+}
+
+.pagination-arrow {
+    font-size: 20px;
+    color: #FFF;
+}
+
+.poke-title {
+    font-family: Flexo-Medium,arial,sans-serif;
+    color: #212121;
+    font-size: 225%;
+    margin-top: 0.5em;
+    text-align: center;
+    width: 100%;
+    word-break: break-word;
+}
