@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './PokePage.css';
 import {Link} from 'react-router';
 import {service} from '../service/HttpService';
-import AbilityInfo from './details/AbilityInfo';
+// import AbilityInfo from './details/AbilityInfo';
 
 class PokePage extends Component {
 	constructor(props) {
@@ -12,6 +12,8 @@ class PokePage extends Component {
 			next: 0,
 			prev: 0,
 			pokedata: [],
+			abilities: [],
+			pokename: '',
 		};
 	}
 
@@ -20,8 +22,15 @@ class PokePage extends Component {
 
 		service.get(`pokemon/${this.props.params.pid}/`)
 			.then(function(data){
-					this.setState({pokedata: [data]});
+					this.setState({
+						pokedata: [data],
+						abilities: data.abilities,
+						pokename: data.name
+					});
 		}.bind(this));
+
+		let pokemon = service.getAllPokemon();
+		console.log(pokemon);
 	}
 
 	getPrevious() {
@@ -32,14 +41,17 @@ class PokePage extends Component {
 		return {'pid': 2, 'name': 'Ivysaur', 'link': '/pokemon/2'};
 	}
 
+	// getAbilities(){
+	// 	return this.state.pokedata.map(function(item) {
+	// 		//return <AbilityInfo key={item.id} height={item.height} weight={item.weight} species={item.species} abilities={[item.abilities]} />;
+	// 	});
+	// }
+
 	render() {
 		let {pid} = this.props.params;
 		let previous = this.getPrevious();
 		let next = this.getNext();
-
-		const abilitiesInfo = this.state.pokedata.map(function(item){
-			return <AbilityInfo height={item.height} weight={item.weight} species={item.species} abilities={item.abilities} />;
-		});
+		// let abilitiesInfo = this.getAbilities();
 
 		// const statsInfo = this.state.pokedata.map(function(item){
 		// 	return <StatsInfo hp={item.hp} attack={item.attack} defense={item.defense} speed={item.speed} sp_atk={item.sp_atk} sp_def={item.sp_def}  />;
@@ -83,7 +95,7 @@ class PokePage extends Component {
 				</section>
 				<div className="poke-detail-wrapper wrapper">
 					<section id="poke-title">
-						{/*{pokename}*/}
+						{this.state.pokename}
 						<span className="poke-number"># {pid}</span>
 					</section>
 
@@ -101,7 +113,7 @@ class PokePage extends Component {
 
 							{/*{descriptions}*/}
 
-							{abilitiesInfo}
+							{/*{abilitiesInfo}*/}
 
 							{/*{statsInfo}*/}
 

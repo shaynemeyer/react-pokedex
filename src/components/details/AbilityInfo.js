@@ -2,6 +2,7 @@ import React from 'react';
 
 function AbilityInfo() {
 	let abilities = this.props.abilities.map(function(item){
+		console.log(item);
 		return (<li key={item.resource_uri}>
 			<a href="" className="moreInfo">
 				<span className="attribute-value">{item.name}</span>
@@ -39,7 +40,6 @@ function AbilityInfo() {
 							<ul className="attribute-list">
 								{abilities}
 							</ul>
-
 						</li>
 					</ul>
 				</div>
